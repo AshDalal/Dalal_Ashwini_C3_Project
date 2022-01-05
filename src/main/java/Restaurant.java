@@ -48,7 +48,13 @@ public class Restaurant {
         menu.remove(itemToBeRemoved);
     }
     public int getTotalCost(List<String> itemNames){
-        return 0;
+        int totalCost = 0;
+        for (String itemName: itemNames){
+            totalCost += this.getMenu().stream()
+                    .filter(menu -> itemName.equals(menu.getName()))
+                    .findFirst().get().getPrice();
+        }
+        return totalCost;
     }
 
     public void displayDetails(){
