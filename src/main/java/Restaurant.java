@@ -47,6 +47,9 @@ public class Restaurant {
             throw new itemNotFoundException(itemName);
         menu.remove(itemToBeRemoved);
     }
+    public int getTotalCost(List<String> itemNames){
+        return 0;
+    }
 
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"

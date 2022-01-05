@@ -64,5 +64,12 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>Total Cost<<<<<<<<<<<<<<<<<<<<<<<<<
-
+    @Test
+    public void get_total_cost_should_return_sum_of_costs_of_items_sent() {
+        List<String> itemNames = new ArrayList<String>();
+        itemNames.add("Vegetable lasagne");
+        itemNames.add("Sizzling brownie");
+        int totalCost = restaurant.getTotalCost(itemNames);
+        assertEquals(588, totalCost);
+    }
 }
